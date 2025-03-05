@@ -1,0 +1,19 @@
+class Persona:
+    def __init__(self, nombre):
+        self.nombre = nombre
+
+class Estudiante(Persona):
+    def estudiar(self):
+        print(f"{self.nombre} está estudiando.")
+
+class Deportista(Persona):
+    def entrenar(self):
+        print(f"{self.nombre} está entrenando.")
+
+class EstudianteDeportista(Estudiante, Deportista):
+    def __init__(self, nombre):
+        Persona.__init__(self, nombre)
+
+estudiante_deportista = EstudianteDeportista("Carlos")
+estudiante_deportista.estudiar()
+estudiante_deportista.entrenar()
