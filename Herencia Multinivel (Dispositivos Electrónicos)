@@ -1,0 +1,19 @@
+ 
+
+class Dispositivo:
+    def encender(self):
+        print("El dispositivo está encendido.")
+
+class Computadora(Dispositivo):
+    def ejecutar_programa(self, programa):
+        print(f"Ejecutando {programa}")
+
+class Portatil(Computadora):
+    def transportar(self):
+        print("El portátil es fácil de transportar.")
+
+portatil = Portatil()
+portatil.encender()
+portatil.ejecutar_programa("Python")
+portatil.transportar()
+
